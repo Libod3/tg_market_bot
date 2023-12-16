@@ -62,9 +62,8 @@ def run():
 
 def save_results():
     path = '/Users/libod/PycharmProjects/tg_market_bot/database.csv'
-    with open(path, 'w') as file:
+    with open(path, 'a') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(headers_for_csv)
         inf_about_product = parse_page(load_page())
         headers_for_next_line = (
             '0',
